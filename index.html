@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> Mission to Mars </title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bring in our bootstrap stylesheet -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+        integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="web_visual.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <style>
+        .img-container {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="jumbotron text-center">
+            <h1>Mission to Mars</h1>
+            <p><a class="btn btn-primary" href="/scrape" role="button"> Scrape New Data </a></p>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <h3>Latest Mars News</h3>
+                <hr>
+                <h5>{{mars.title}}</h5>
+                <p>{{mars.para}}</p>
+
+            </div>
+        </div>
+
+        <div class="row">
+
+            <div class="col-md-8">
+
+                <h3> Featured Mars Image </h3>
+                <hr>
+                <img src="{{mars.featured_image_url}}" alt="Mars Featured Image" style="width: 100%">
+
+            </div>
+
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <h4>Mars Facts</h4>
+                            <hr>
+                            {{mars.fact_html}}
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <h3 style="text-align: center;"> Mars Hemispheres </h3>
+            <div class="row">
+                <div class="col-md-6">
+                    <h3 style="text-align: center;"> {{mars.hem_img[0].title}} </h3>
+                    <div class="img-container">
+                        <img src={{mars.hem_img[0].img_url}} style="max-width:100%;
+                 height:auto;" />
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <h3 style="text-align: center;"> {{mars.hem_img[1].title}} </h3>
+                    <div class="img-container">
+                        <img src={{mars.hem_img[1].img_url}} style="max-width:100%;
+                 height:auto;" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="row">
+                <div class="col-md-6">
+                    <h3 style="text-align: center;"> {{mars.hem_img[2].title}} </h3>
+                    <div class="img-container">
+                        <img src={{mars.hem_img[2].img_url}} style="max-width:100%;
+                 height:auto;" />
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <h3 style="text-align: center;"> {{mars.hem_img[3].title}} </h3>
+                    <div class="img-container">
+                        <img src={{mars.hem_img[3].img_url}} style="max-width:100%;
+                 height:auto;" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <footer>
+        <p style="text-align: center">Data Science Bootcamp <i class="glyphicon glyphicon-copyright-mark"> </i> 2020.
+            All Rights Reserved</p>
+
+    </footer>
+</body>
+
+</html>
