@@ -1,3 +1,7 @@
 selenium==3.5.0
 splinter==0.7.6
 pandas
+bs4
+lxml
+flask
+flask_pymongo
